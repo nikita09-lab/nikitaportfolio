@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects | Nikita</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="javascript/theme.js"></script>
+  <style>
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .dark-mode .project-card {
+      background: #1e1e1e;
+      color: #eee;
+    }
+
+    .dark-mode .project-description {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+      <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+    </div>
+    <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
+
+  <main>
+    <h1>My Projects</h1>
+    <p>Here’s a glimpse of the work I’ve done — from websites to apps!</p>
+
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-title">Project One</div>
+        <div class="project-description">A cool website built with HTML, CSS, and JavaScript.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Project Two</div>
+        <div class="project-description">A web app deployed on Vercel using modern frontend tools.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Project Three</div>
+        <div class="project-description">An open-source tool available on GitHub with full documentation.</div>
+      </div>
+    </div>
+
+    <div class="buttons" style="margin-top: 2rem;">
+      <a href="index.html"><button>← Back to Home</button></a>
+    </div>
+  </main>
+</body>
+</html>

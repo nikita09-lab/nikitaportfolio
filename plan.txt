@@ -1,0 +1,84 @@
+🔧 Tech Stack (Frontend Only)
+HTML, CSS (or TailwindCSS), JavaScript
+
+React.js (recommended for component-based structure and smooth routing)
+
+EmailJS (for sending/receiving contact messages via API without backend)
+
+Vercel (for deployment)
+
+Optional: Framer Motion or GSAP for animations
+
+🗂️ Portfolio Structure
+1. Opening Page (Landing)
+Top right/left: 🔗 Social Media Icon Links
+
+GitHub
+
+LinkedIn
+
+Twitter
+
+Telegram
+
+Center:
+
+Short intro description about you
+
+3 Buttons:
+
+🎨 My Work → redirects to /projects
+
+🧰 Tech Stack → redirects to /stack
+
+📄 Resume → redirects to /resume (can open PDF or separate component)
+
+🌙🔆 Toggle Mode (Dark/Light) switch in corner
+
+2. Contact Section
+Basic contact form with:
+
+Name
+
+Email
+
+Message
+
+Uses EmailJS:
+
+You get a message in your email
+
+They get a thank-you message (auto-response)
+
+Optional: Toasts for “Message sent” confirmation
+
+3. Pages
+/projects: Show your portfolio work (maybe card layout)
+
+/stack: Show icons/logos of the tools and languages you use
+
+/resume: Embed your resume or offer download
+
+/contact: Optional dedicated contact page (or can be a section on home)
+
+🔁 Routing
+Use React Router for smooth page transitions
+
+🌐 Hosting on Vercel
+Once the React app is ready:
+
+Push to GitHub
+
+Go to vercel.com
+
+Import project from GitHub
+
+Deploy 🚀
+
+✅ Bonus Features
+Add animations (e.g., text fade-ins)
+
+Responsive design (mobile & tablet friendly)
+
+Loading screen / transition effects
+

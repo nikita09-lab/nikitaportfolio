@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Nikita</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="javascript/theme.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="social-icons">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+      <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+    </div>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main>
+    <h1>Contact Me</h1>
+    <p>Got a project or just want to say hello? Fill out the form below — I’d love to hear from you!</p>
+
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="reply_to" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="buttons" style="margin-top: 2rem;">
+      <a href="index.html"><button>← Back to Home</button></a>
+    </div>
+  </main>
+
+  <script>
+    emailjs.init("MhgI_IbWBoCsHjN8z"); // Your EmailJS public key
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_Nikita", "__ejs-test-mail-service__", this)
+        .then(function (response) {
+          alert("🎉 Message sent successfully!");
+          document.getElementById("contact-form").reset();
+        }, function (error) {
+          alert("❌ Message
