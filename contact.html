@@ -5,8 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Me | Nikita</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Load theme toggle script only once, deferred -->
   <script defer src="javascript/theme.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .social-icons a {
+      color: #90caf9;
+    }
+
+    body.dark-mode button {
+      background-color: #4dabf7;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .social-icons a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
+
+    #themeToggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .buttons a button {
+      background-color: #6c757d;
+    }
+
+    .buttons a button:hover {
+      background-color: #5a6268;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,9 +110,10 @@
     <h1>Contact Me</h1>
     <p>Got a project or just want to say hello? Fill out the form below — I’d love to hear from you!</p>
 
-    <form id="contact-form">
-      <input type="text" name="from_name" placeholder="Your Name" required />
-      <input type="email" name="reply_to" placeholder="Your Email" required />
+    <form id="contact-form" action="https://formspree.io/f/maneldkz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="title" placeholder="Subject" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
@@ -34,16 +122,5 @@
       <a href="index.html"><button>← Back to Home</button></a>
     </div>
   </main>
-
-  <script>
-    emailjs.init("MhgI_IbWBoCsHjN8z"); // Your EmailJS public key
-
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      emailjs.sendForm("service_Nikita", "__ejs-test-mail-service__", this)
-        .then(function (response) {
-          alert("🎉 Message sent successfully!");
-          document.getElementById("contact-form").reset();
-        }, function (error) {
-          alert("❌ Message
+</body>
+</html>

@@ -5,7 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Resume | Nikita</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Load dark mode toggle only once -->
   <script defer src="javascript/theme.js"></script>
+
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .social-icons a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
+
+    #themeToggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons a button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a button:hover {
+      background-color: #0056b3;
+    }
+
+    .dark-mode .social-icons a {
+      color: #90caf9;
+    }
+
+    .dark-mode .buttons a button {
+      background-color: #4dabf7;
+    }
+
+    .dark-mode .buttons a button:hover {
+      background-color: #2196f3;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,7 +96,4 @@
 
     <div class="buttons">
       <a href="index.html"><button>← Back to Home</button></a>
-    </div>
-  </main>
-</body>
-</html>
+    </
