@@ -1,0 +1,53 @@
+:root {
+  --font-size: 16px;
+  --background: #F6EEE8;
+  --foreground: #4A0013;
+  --primary: #4A0013;
+  --primary-foreground: #F6EEE8;
+  --secondary: #A26769;
+  --secondary-foreground: #F6EEE8;
+  --muted: #D8B4A0;
+  --muted-foreground: #6B0F1A;
+  --accent: #6B0F1A;
+  --accent-foreground: #F6EEE8;
+  --border: rgba(74, 0, 19, 0.1);
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #4A0013;
+    color: #F6EEE8;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F6EEE8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6B0F1A;
+    opacity: 0.3;
+  }
+}
