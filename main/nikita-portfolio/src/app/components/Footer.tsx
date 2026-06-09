@@ -4,6 +4,12 @@ import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    { icon: Github,   label: "GitHub",   href: "https://github.com/nikita09-lab" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/nikita-mishra-6985812b6/" },
+    { icon: Mail,     label: "Email",    href: "mailto:nikitamishra090906@gmail.com" },
+  ];
+
   return (
     <footer
       id="contact"
@@ -20,6 +26,7 @@ export function Footer() {
           position: "absolute",
           inset: 0,
           opacity: 0.05,
+          pointerEvents: "none",
           backgroundImage: `url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9IiNGNkVFRTgiLz48L3N2Zz4=")`,
         }}
       />
@@ -61,12 +68,13 @@ export function Footer() {
                 lineHeight: 1.7,
               }}
             >
-              Interested in collaborating on innovative AI projects? Let's connect and build the
-              future together.
+              Interested in collaborating on innovative AI projects? Let's connect and
+              build the future together.
             </p>
 
+            {/* ✅ Fixed: mailto: prefix added */}
             <motion.a
-              href="mailto:nikita@example.com"
+              href="mailto:nikitamishra090906@gmail.com"
               whileHover={{ x: 4 }}
               style={{
                 display: "inline-flex",
@@ -74,7 +82,6 @@ export function Footer() {
                 gap: 12,
                 color: "#F6EEE8",
                 textDecoration: "none",
-                transition: "color 0.3s",
               }}
             >
               <span
@@ -120,15 +127,14 @@ export function Footer() {
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                {[
-                  { icon: Github, label: "GitHub", href: "https://github.com/nikita09-lab" },
-                  { icon: Linkedin, label: "LinkedIn", href: "#" },
-                  { icon: Mail, label: "Email", href: "mailto:nikita@example.com" },
-                ].map(({ icon: Icon, label, href }) => (
+                {socialLinks.map(({ icon: Icon, label, href }) => (
                   <motion.a
                     key={label}
                     href={href}
-                    whileHover={{ x: 4, color: "#D8B4A0" }}
+                    /* ✅ GitHub and LinkedIn open in new tab; email opens mail client */
+                    target={href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                    whileHover={{ x: 4 }}
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
@@ -139,12 +145,7 @@ export function Footer() {
                     }}
                   >
                     <Icon size={20} />
-                    <span
-                      style={{
-                        fontFamily: "Inter, sans-serif",
-                        fontSize: 16,
-                      }}
-                    >
+                    <span style={{ fontFamily: "Inter, sans-serif", fontSize: 16 }}>
                       {label}
                     </span>
                   </motion.a>
