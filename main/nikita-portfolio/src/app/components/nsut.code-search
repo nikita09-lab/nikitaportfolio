@@ -1,0 +1,9 @@
+# Query: nsut
+# ContextLines: 1
+
+1 result - 1 file
+
+main/nikita-portfolio/src/app/components/ResumeSection.tsx:
+  28      achievements: [
+  29:       "Served as Project Admin for Virtual Science Lab at NSoC (Nexus Spring Of Code Open Source Community)",
+  30        "Mentored contributors building science experiment simulations with React, FastAPI, and MongoDB Atlas",

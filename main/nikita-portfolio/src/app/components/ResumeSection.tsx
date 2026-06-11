@@ -26,7 +26,7 @@ const experience = [
     company: "Virtual Science Lab",
     period: "2026",
     achievements: [
-      "Served as Project Admin for Virtual Science Lab at NSoC (NSUT's Open Source Cohort)",
+      "Served as Project Admin for Virtual Science Lab at NSoC (Nexus Spring Of Code Open Source Community)",
       "Mentored contributors building science experiment simulations with React, FastAPI, and MongoDB Atlas",
       "Reviewed pull requests, managed GitHub issues, and guided the community roadmap",
     ],
