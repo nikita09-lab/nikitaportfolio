@@ -22,3 +22,4 @@ I am a developer building modern web applications with a focus on clean design a
 ## Contact
 
 Feel free to reach out if you want to discuss collaboration or learn more about my work.
+**nikitamishra090906@gmail.com**
